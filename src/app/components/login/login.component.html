@@ -1,0 +1,33 @@
+<p>login works!</p>
+
+<div>
+    <h1>Login Component</h1>
+    <p>Login Component with <a href="https://angular.io/guide/reactive-forms" target="_blank">Reactive Form in
+            Angular</a> </p>
+    <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" formControlName="username" placeholder="Enter your username"
+                required="true" autofocus>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" formControlName="password" placeholder="Enter your password">
+        </div>
+        <br />
+        <input type="submit" value="Login" />
+    </form>
+    <p *ngIf="postLoginMessage">{{postLoginMessage}}</p>
+
+</div>
+<!-- <div>
+    <label for="username">Username : </label>
+    <input type="text" name = "username" placeholder="Enter username" [(ngModel)] = "name">
+    <br><br>
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Enter your passowrd" [(ngModel)] = "password">
+    <button (click) = "isClicked()">Submit</button>
+    <div *ngIf = "isSubmit">
+        <p>{{message}}</p>
+    </div>
+</div> -->

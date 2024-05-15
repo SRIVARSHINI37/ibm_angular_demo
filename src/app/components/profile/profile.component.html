@@ -1,0 +1,50 @@
+<h3>Profile works!</h3>
+<div *ngIf="profileData">
+    <p>uUername: {{profileData.username}}</p>
+    <p>Name: {{profileData.name}}</p>
+    <p>Email:{{profileData.email}}</p>
+    <p>Salary:{{profileData.salary}}</p>
+    <p>Aadhar:{{profileData.aadhaar}}</p>
+</div>
+
+<div>
+    <app-edit-profile [profileData]="profileData" (profileUpdated)="onProfileUpdated($event)"></app-edit-profile>
+</div>
+<!-- <div style="display: flex; margin-left: 5%; margin-right: 5%;">
+    <div style="flex: 1;">
+        <h1>User Profile</h1>
+        <p>Name : {{userData.name}}</p>
+        <p>Email : {{userData.email}}</p>
+        <p>Aadhar : {{userData.aadhaar}}</p>
+        <p>Salary : {{userData.salary}}</p>
+        <p>Phone : {{userData.phone}}</p>
+    </div>
+    <div style="flex: 1; ">
+        <img [src]="userData.avatar" [alt]="userData.avatar " width="300px" height="300px">
+    </div>
+</div>
+<div class="profile-container">
+    <h3>Update profile</h3>
+    <form action="">
+        <label for="avatar">Avatar: </label>
+        <input type="text" name="avatar" class="input-field" [(ngModel)] = "tempData.avatar">
+        <br><br>
+        <label for="name">Name : </label>
+        <input type="text" name="name" class="input-field" [(ngModel)]="tempData.name">
+        <br><br>
+        <label for="email">Email : </label>
+        <input type="text" name="email" class="input-field" [(ngModel)]="tempData.email">
+        <br><br>
+        <label for="aadhaar">Aadhar : </label>
+        <input type="number" name="aadhaar" class="input-field" [(ngModel)]="tempData.aadhaar">
+        <br><br>
+        <label for="salary">Salary : </label>
+        <input type="number" name="salary" class="input-field" [(ngModel)]="tempData.salary">
+        <br><br>
+        <label for="phone">Phone : </label>
+        <input type="number" name="phone" class="input-field" [(ngModel)]="tempData.phone">
+        <br><br>
+        <button class="button" (click)="onClick()">Edit Data</button>
+    </form>
+<app-edit-profile [updatedProfile] = "userData"></app-edit-profile>
+</div> -->

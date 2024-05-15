@@ -1,0 +1,17 @@
+<h3>Employee Component</h3>
+<button (click)="getAllEmps()">Get All employees</button>
+<div>
+    {{empList?.name}}
+</div>
+<h3>Get employee by id</h3>
+<form (submit)="getEmpById()">
+    <input type="text" id="employeeId" name="employeeId" [(ngModel)]="employeeId">
+    <input type="submit" value="Find">
+</form>
+
+<div>
+    <p>Name : {{empData?.name}}</p>
+    <p>Email : {{empData?.email}}</p>
+    <p>Salary : {{empData?.salary}}</p>
+    <p>Aadhar : {{empData?.aadhaar}}</p>
+</div>
